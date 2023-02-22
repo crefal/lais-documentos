@@ -25,14 +25,21 @@
                     <td>Código de referencia</td>
                     <td>{{conjunto.identificacion.codigoReferencia}}</td>
                   </tr>
+                  <!-- Daniel Sánchez 22/02/23 Se comenta porque no se ocupa
                   <tr ng-if="conjunto.identificacion.institucion">
                     <td>Institución</td>
                     <td>{{conjunto.identificacion.institucion}}</td>
                   </tr>
+                  -->
                   <tr>
                     <td>Título</td>
                     <td>{{conjunto.identificacion.titulo}}</td>
                   </tr>
+                  <tr ng-if="conjunto.identificacion.fecha">
+                    <td>Fecha</td>
+                    <td>{{conjunto.identificacion.fecha }}</td>
+                  </tr>
+                  <!-- Daniel Sánchez 22/02/23 Se comenta porque no se ocupa
                   <tr ng-if="conjunto.identificacion.fecha && conjunto.identificacion.fecha.inicio">
                     <td>Fecha</td>
                     <td>
@@ -41,6 +48,7 @@
                       <span ng-if="conjunto.identificacion.fecha.aproximada"><small>(incluye fechas aproximadas)</small></span>
                     </td>
                   </tr>
+                  -->
                   <tr ng-if="conjunto.identificacion.productor">
                     <td>Productor</td>
                     <td>{{conjunto.identificacion.productor}}</td>

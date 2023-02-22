@@ -147,6 +147,7 @@ angular.module('ConjuntoDocumentalFormCtrl',[]).controller('ConjuntoDocumentalFo
         ConjuntoDocumental.get($routeParams.id)
         .then(function(res){
             $scope.conjuntoDocumental = res.data;
+            console.log($scope.conjuntoDocumental.identificacion);
             // Agregar un espacio adicional para seguir agregando autores
             $scope.conjuntoDocumental.identificacion.autores.push({tipo: '', nombre: ''});
         }, function(res){

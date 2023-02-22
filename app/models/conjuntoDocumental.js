@@ -12,9 +12,11 @@ var ConjuntoDocumentalSchema = new Schema({
 		codigoReferencia: {type: String, required: true, index: {unique: true}},
 		institucion: {type: String, trim: true},
 		titulo: {type: String, trim: true, required: true},
-		// fecha: { // fecha de manufactura // INFERIDO
+		fecha:  {type: Date},
+		fechaInicio1:  {type: Date},
+		//fecha: { // fecha de manufactura // INFERIDO
 		// 	inicio: {type: Date},
-		// 	fin: {type: Date} // En caso de ser un periodo
+		// 	fin: {type: Date}, // En caso de ser un periodo
 		//	aproximada: {type: Boolean} // En caso de incluir fechas aproximadas
 		// },
 		// lugarDescrito: [{ // INFERIDO (Google Maps style)
