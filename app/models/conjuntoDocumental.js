@@ -12,8 +12,7 @@ var ConjuntoDocumentalSchema = new Schema({
 		codigoReferencia: {type: String, required: true, index: {unique: true}},
 		institucion: {type: String, trim: true},
 		titulo: {type: String, trim: true, required: true},
-		fecha:  {type: Date},
-		fechaInicio1:  {type: Date},
+		fechaGeneral:  {type: Date},
 		//fecha: { // fecha de manufactura // INFERIDO
 		// 	inicio: {type: Date},
 		// 	fin: {type: Date}, // En caso de ser un periodo
