@@ -60,10 +60,11 @@ var ConjuntoDocumentalSchema = new Schema({
 		estadoConservacion: {type: String, trim: true}
 	},
 	documentacionAsociada: {
-		serieFotograficaIgualManufactura: {type: String, trim: true},
+		unidadDescripcionRelacionada: {type: String, trim: true}
+		/*serieFotograficaIgualManufactura: {type: String, trim: true},
 		registrosBase: {type: String, trim: true},
 		reprografias: {type: String, trim: true},
-		grabadosRelacionados: {type: String, trim: true}
+		grabadosRelacionados: {type: String, trim: true}*/
 	},
 	publicaciones: {
 		publicacion: {type: String, trim: true},

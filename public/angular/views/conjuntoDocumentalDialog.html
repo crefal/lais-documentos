@@ -201,11 +201,16 @@
             </md-table-container>
           </md-content>
         </md-tab>
-        <md-tab label="Documentación asociada" ng-if="conjunto.documentacionAsociada.serieFotograficaIgualManufactura || conjunto.documentacionAsociada.registrosBase || conjunto.documentacionAsociada.reprografias || conjunto.documentacionAsociada.grabadosRelacionados">
+        <md-tab label="Documentación asociada" ng-if="conjunto.documentacionAsociada.unidadDescripcionRelacionada">
           <md-content class="md-padding">
             <md-table-container>
               <table class="my-table-md-dialog">
                 <tbody>
+                  <tr ng-if="conjunto.documentacionAsociada.unidadDescripcionRelacionada">
+                    <td>Unidad de descripción relacionada</td>
+                    <td>{{conjunto.documentacionAsociada.unidadDescripcionRelacionada}}</td>
+                  </tr>
+                  <!--Daniel Sanchez 22/02/2023 Se comentaron estos campos no se ocupan para este proyecto
                   <tr ng-if="conjunto.documentacionAsociada.serieFotograficaIgualManufactura">
                     <td>Serie fotográfica de igual manufactura</td>
                     <td>{{conjunto.documentacionAsociada.serieFotograficaIgualManufactura}}</td>
@@ -222,6 +227,7 @@
                     <td>Grabados relacionados</td>
                     <td>{{conjunto.documentacionAsociada.grabadosRelacionados}}</td>
                   </tr>
+                  -->
                 </tbody>
               </table>
             </md-table-container>
