@@ -75,10 +75,11 @@ angular.module('laisFotoApp', [
     $mdDateLocaleProvider.shortMonths = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
     $mdDateLocaleProvider.days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
     $mdDateLocaleProvider.shortDays = ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'];
-	//Daniel Sanchez 22/02/23 Se comento porque causa error en el datapicker 
-    //$mdDateLocaleProvider.formatDate = function(date){
-    //	return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
-    //};
+	//Daniel Sanchez 22/02/23 Se comento porque causa error en el datapicker y se agrego la libreria de moment para hacer el cast
+    $mdDateLocaleProvider.formatDate = function(date){
+		return moment(date).format("YYYY-MM-DD");
+    	//return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+    };
     $mdDateLocaleProvider.weekNumberFormatter = function(weekNumber){
     	return 'Semana ' + weekNumber;
     };
