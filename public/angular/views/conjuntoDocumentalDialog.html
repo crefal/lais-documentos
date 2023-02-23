@@ -49,6 +49,10 @@
                     </td>
                   </tr>
                   -->
+                  <tr ng-if="conjunto.identificacion.volumen">
+                    <td>Volumen y soporte</td>
+                    <td>{{conjunto.identificacion.volumen }}</td>
+                  </tr>
                   <tr ng-if="conjunto.identificacion.productor">
                     <td>Productor</td>
                     <td>{{conjunto.identificacion.productor}}</td>
