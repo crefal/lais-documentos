@@ -175,32 +175,6 @@
             </md-table-container>
           </md-content>
         </md-tab>
-        <md-tab label="Documentación asociada" ng-if="conjunto.documentacionAsociada.condicionesAcceso || conjunto.documentacionAsociada.condicionesReproduccion || conjunto.documentacionAsociada.caracteristicasFisicas || conjunto.documentacionAsociada.estadoConservacion">
-          <md-content class="md-padding">
-            <md-table-container>
-              <table class="my-table-md-dialog">
-                <tbody>
-                  <tr ng-if="conjunto.documentacionAsociada.condicionesAcceso">
-                    <td>Condiciones de acceso</td>
-                    <td>{{conjunto.documentacionAsociada.condicionesAcceso}}</td>
-                  </tr>
-                  <tr ng-if="conjunto.documentacionAsociada.condicionesReproduccion">
-                    <td>Condiciones de reproducción</td>
-                    <td>{{conjunto.documentacionAsociada.condicionesReproduccion}}</td>
-                  </tr>
-                  <tr ng-if="conjunto.documentacionAsociada.caracteristicasFisicas">
-                    <td>Características físicas</td>
-                    <td>{{conjunto.documentacionAsociada.caracteristicasFisicas}}</td>
-                  </tr>
-                  <tr ng-if="conjunto.documentacionAsociada.estadoConservacion">
-                    <td>Estado de conservación</td>
-                    <td>{{conjunto.documentacionAsociada.estadoConservacion}}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </md-table-container>
-          </md-content>
-        </md-tab>
         <md-tab label="Documentación asociada" ng-if="conjunto.documentacionAsociada.unidadDescripcionRelacionada">
           <md-content class="md-padding">
             <md-table-container>
@@ -233,7 +207,7 @@
             </md-table-container>
           </md-content>
         </md-tab>
-        <md-tab label="Publicaciones" ng-if="conjunto.publicaciones.publicacion || conjunto.publicaciones.exposicion">
+        <md-tab label="Publicaciones" ng-if="conjunto.publicaciones.publicacion">
           <md-content class="md-padding">
             <md-table-container>
               <table class="my-table-md-dialog">
@@ -267,7 +241,7 @@
             </md-table-container>
           </md-content>
         </md-tab>
-        <md-tab label="Control de la descripción" ng-if="(conjunto.controlDescripcion.documentalistas && conjunto.controlDescripcion.documentalistas.length > 0) || conjunto.controlDescripcion.reglasNormas || conjunto.createdAt || conjunto.updatedAt">
+        <md-tab label="Control de la descripción" ng-if="(conjunto.controlDescripcion.documentalistas && conjunto.controlDescripcion.documentalistas.length > 0) || conjunto.controlDescripcion.reglasNormas || conjunto.controlDescripcion.archivista || conjunto.createdAt || conjunto.updatedAt">
           <md-content class="md-padding">
             <md-table-container>
               <table class="my-table-md-dialog">
@@ -276,6 +250,10 @@
                     <td>Documentalistas</td>
                     <td>{{conjunto.controlDescripcion.documentalistas.join(', ')}}</td>
                   </tr> -->
+                  <tr ng-if="conjunto.controlDescripcion.archivista">
+                    <td>Archivista</td>
+                    <td>{{conjunto.controlDescripcion.archivista }}</td>
+                  </tr>
                   <tr ng-if="conjunto.controlDescripcion.reglasNormas">
                     <td>Reglas o normas</td>
                     <td>{{conjunto.controlDescripcion.reglasNormas}}</td>

@@ -74,6 +74,7 @@ var ConjuntoDocumentalSchema = new Schema({
 		notas: {type: String, trim: true}
 	},
 	controlDescripcion: {
+		archivista: {type: String, trim: true},
 		// documentalistas: [{type: String}], //[{type: Schema.Types.ObjectId, ref: 'Usuario'}] // INFERIDO
 		reglasNormas: {type: String, trim: true, default: 'LAIS, Lineamientos para la descripción de fotografías, 2011'},
 		//actualizacionDescripcion: {type: Date} // IMPLÍCITO (updatedAt)
