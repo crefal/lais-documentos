@@ -68,7 +68,7 @@ var ConjuntoDocumentalSchema = new Schema({
 	},
 	publicaciones: {
 		publicacion: {type: String, trim: true},
-		exposicion: {type: String, trim: true}
+		//exposicion: {type: String, trim: true}
 	},
 	notas: {
 		notas: {type: String, trim: true}
