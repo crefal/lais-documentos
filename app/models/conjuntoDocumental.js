@@ -54,7 +54,9 @@ var ConjuntoDocumentalSchema = new Schema({
 	condicionesAcceso: {
 		condicionesAcceso: {type: String, trim: true},
 		condicionesReproduccion: {type: String, trim: true},
+		lengua: {type: String, trim: true},
 		caracteristicasFisicas: {type: String, trim: true},
+		instrumentosDescripcion: {type: String, trim:true},
 		estadoConservacion: {type: String, trim: true}
 	},
 	documentacionAsociada: {

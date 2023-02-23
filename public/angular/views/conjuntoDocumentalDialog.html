@@ -125,7 +125,7 @@
                     <td>{{conjunto.estructuraContenido.alcanceContenido}}</td>
                   </tr>
                   <tr ng-if="conjunto.estructuraContenido.valoracionSeleccionEliminacion">
-                    <td>Valoracion, seleccion y eliminacion</td>
+                    <td>Valoración, selección y eliminación</td>
                     <td>{{conjunto.estructuraContenido.valoracionSeleccionEliminacion}}</td>
                   </tr>
                   <tr ng-if="conjunto.estructuraContenido.nuevosIngresos">
@@ -141,7 +141,7 @@
             </md-table-container>
           </md-content>
         </md-tab>
-        <md-tab label="Condiciones de acceso" ng-if="conjunto.condicionesAcceso.condicionesAcceso || conjunto.condicionesAcceso.condicionesReproduccion || conjunto.condicionesAcceso.caracteristicasFisicas || conjunto.condicionesAcceso.estadoConservacion">
+        <md-tab label="Condiciones de acceso" ng-if="conjunto.condicionesAcceso.condicionesAcceso || conjunto.condicionesAcceso.condicionesReproduccion || conjunto.condicionesAcceso.lengua || conjunto.condicionesAcceso.caracteristicasFisicas || conjunto.condicionesAcceso.instrumentosDescripcion || conjunto.condicionesAcceso.estadoConservacion">
           <md-content class="md-padding">
             <md-table-container>
               <table class="my-table-md-dialog">
@@ -154,9 +154,17 @@
                     <td>Condiciones de reproducción</td>
                     <td>{{conjunto.condicionesAcceso.condicionesReproduccion}}</td>
                   </tr>
+                  <tr ng-if="conjunto.condicionesAcceso.lengua">
+                    <td>Lengua</td>
+                    <td>{{conjunto.condicionesAcceso.lengua}}</td>
+                  </tr>
                   <tr ng-if="conjunto.condicionesAcceso.caracteristicasFisicas">
                     <td>Características físicas</td>
                     <td>{{conjunto.condicionesAcceso.caracteristicasFisicas}}</td>
+                  </tr>
+                  <tr ng-if="conjunto.condicionesAcceso.instrumentosDescripcion">
+                    <td>Instrumentos de descripción</td>
+                    <td>{{conjunto.condicionesAcceso.instrumentosDescripcion}}</td>
                   </tr>
                   <tr ng-if="conjunto.condicionesAcceso.estadoConservacion">
                     <td>Estado de conservación</td>
